@@ -67,7 +67,7 @@
 		// 	'<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
 		// 	: 'Hover over a state');
 
-		this._div.innerHTML = '<h4>CLICK STATE TO OPEN CALENDAR</h4>' + (props ?
+		this._div.innerHTML = '<h4>CLICK STATE TO OPEN TRAINING CALENDAR</h4>' + (props ?
 		'Facility Count: ' + '<b>' + props.Count_Facilities + '</b>' : 'Hover for facility count'
 		);
 
@@ -78,14 +78,14 @@
 
 	// get color depending on population density value
 	function getColor(d) {
-		return d > 140 ? '#800026' :
-				d > 100  ? '#BD0026' :
-				d > 70  ? '#E31A1C' :
-				d > 50  ? '#FC4E2A' :
-				d > 30   ? '#FD8D3C' :
-				d > 20   ? '#FEB24C' :
-				d > 10   ? '#FED976' :
-							'#FFEDA0';
+		return d > 140 ? '#002d52' :
+				d > 100  ? '#234469' :
+				d > 70  ? '#3e5c80' :
+				d > 50  ? '#577598' :
+				d > 30   ? '#718fb1' :
+				d > 20   ? '#8caaca' :
+				d > 10   ? '#a7c6e4' :
+							'#c2e3ff';
 	}
 
 	function style(feature) {
@@ -125,7 +125,8 @@
 
 	function zoomToFeature(e) {
 		// map.fitBounds(e.target.getBounds());
-		window.open('https://calendar.google.com/calendar/u/0/embed?src=mcusa.calendar@gmail.com&ctz=America/Los_Angeles');
+		// window.open('https://calendar.google.com/calendar/u/0/embed?src=mcusa.calendar@gmail.com&ctz=America/Los_Angeles');
+		window.open('https://outlook.office365.com/calendar/published/27861776bdab48ebb1e4bea3ab9f6f47@mcusaconsulting.com/1afc23a77ac7406fbbb7e6738f508e2915791365320249668383/calendar.html');
 		// window.location = "http://www.google.com/"; 
 	}
 
@@ -147,7 +148,7 @@
 		return feature.properties.Count_Facilities > 0
 	};
 
-	map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+	// map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
 
 	// var legend = L.control({position: 'bottomright'});
